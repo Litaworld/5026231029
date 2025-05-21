@@ -51,3 +51,15 @@ Route::get('template1', function () {
 Route::get('test', function () {
 	return view('test');
 });
+
+Route::get('danantara', function () {
+	return view('danantara');
+});
+
+Route::get('index', function () {
+	return view('index');
+});
+
+Route::get('frontend', function () {
+	return view('frontend');
+});
