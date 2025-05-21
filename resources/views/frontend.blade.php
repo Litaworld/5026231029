@@ -113,7 +113,7 @@
       </div>
 
       <div class="col">
-        <a href="/index" class="text-decoration-none text-dark">
+        <a href="/ets" class="text-decoration-none text-dark">
           <div class="card task-card bg-white h-100">
             <div class="card-body">
               <h5 class="card-title"><i class="fas fa-globe me-1 text-success"></i>Pertemuan 10</h5>
