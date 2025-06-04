@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
+use App\Http\Controllers\PegawaiControllerDua;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 
@@ -68,12 +69,20 @@ Route::get('frontend', function () {
 });
 
 Route::get('dosen', [Link::class, 'index']);
-Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
+//Route::get('/pegawai/{nama}', [PegawaiControllerDua::class, 'index']);
 
-Route::get('/formulir/', [PegawaiController::class, 'formulir']);
-Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+Route::get('/formulir/', [PegawaiControllerDua::class, 'formulir']);
+Route::post('/formulir/proses', [PegawaiControllerDua::class, 'proses']);
 
 //route blog
 Route::get('/blog', [blogcontroller::class, 'home']);
 Route::get('/blog/tentang', [blogcontroller::class, 'tentang']);
 Route::get('/blog/kontak', [blogcontroller::class, 'kontak']);
+
+//route CRUD
+Route::get('/pegawai', [PegawaiController::class, 'index']);
+Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah']);
+Route::get('/pegawai/store', [PegawaiController::class, 'store']);
+Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
+Route::post('/pegawai/update', [PegawaiController::class, 'update']);
+Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
